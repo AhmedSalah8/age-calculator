@@ -1,0 +1,227 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(/img/026\ Saint\ Petersburg.png);
+  font-family: sans-serif;
+}
+.carlito-bold-italic {
+  font-family: "Carlito", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #333;
+  animation: title-shadow 2s ease-in-out infinite;
+  font-weight: 700;
+  font-style: italic;
+}
+.d-none {
+  display: none;
+}
+.container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calculator-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@keyframes title-shadow {
+  0% {
+    text-shadow: 0 0 3px #ccc;
+  }
+  50% {
+    text-shadow: 0 0 5px #999;
+  }
+  100% {
+    text-shadow: 0 0 3px #ccc;
+  }
+}
+
+p {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #666;
+}
+
+.date-inputs {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 70%;
+  margin-bottom: 10px;
+  animation: input-fade-in 1s ease-in-out;
+}
+.input-container {
+  position: relative;
+  width: calc(100% / 3);
+}
+@keyframes input-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.date-inputs label {
+  width: calc(100% / 3);
+  font-size: 18px;
+  margin-right: 10px;
+  color: #666;
+  margin-bottom: 20px;
+  position: absolute;
+  top: -15px;
+  left: 0px;
+  font-weight: 700;
+  text-align: start;
+}
+input:focus::placeholder {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+input {
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 80%;
+  transition: all 0.2s ease-in-out;
+  font-size: 25px;
+  font-weight: 600;
+  height: 50px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #864cff;
+}
+
+button {
+  background-color: #864cff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  font-weight: 700;
+  font-style: italic;
+}
+span {
+  color: #333;
+}
+button:hover {
+  background-color: #854cffc2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+#yearResult,
+#monthResult,
+#dayResult {
+  color: #864cff;
+}
+#result-container > h2 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-size: 50px;
+  font-weight: 700;
+  font-style: italic;
+}
+#wrongDate {
+  font-size: 25px;
+  color: red;
+}
+#birthdayToday {
+  font-size: 35px;
+  color: #4c4c4c;
+  padding: 20px;
+  margin: 0;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+/* Mobile: Up to 480px */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .container {
+    width: 100%;
+  }
+  .date-inputs label {
+    font-size: 0.9rem;
+  }
+  .date-inputs {
+    width: 95%;
+  }
+  input {
+    width: 70%;
+    font-size: 16px;
+  }
+  .input-container {
+    width: calc(100% / 3);
+  }
+  #result-container > h2 {
+    font-size: 30px;
+  }
+  button {
+    font-size: 13px;
+    padding: 10px 15px;
+  }
+}
+
+/* Extra small devices: 481px to 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+  .date-inputs {
+    width: 90%;
+  }
+  input {
+    width: 70%;
+  }
+  .input-container {
+    width: calc(100% / 3);
+  }
+}
+/* Small tablets: 768px to 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 800px;
+  }
+  .date-inputs {
+    width: 80%;
+  }
+  .input-container {
+    width: calc(100% / 3);
+  }
+}
+
+/* Large tablets/laptops: 992px to 1199px */
+@media (min-width: 992px) {
+  .container {
+    width: 100%;
+  }
+}
